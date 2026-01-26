@@ -49,7 +49,7 @@ In 90 days, I want to reach a level where I can confidently:
 - **Weekends:** ~[4 to 6] hours/day (Sat–Sun)
 - **Total Weekly Commitment:** ~[30-32] hours/week
 
-Minimum rule: **Even on busy days, I will do at least 30 minutes** (no zero-day rule).
+Minimum rule: **Even on busy days, I will do at least 30 minutes**.
 
 ---
 
