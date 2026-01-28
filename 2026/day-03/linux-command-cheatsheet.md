@@ -1,6 +1,6 @@
 # Day-3 Linux Commands Practice
 
-- **Note:**All command discription is referred to **man** pages in linux terminal.
+**Note:**All command discription is referred to **man** pages in linux terminal.
 
 ## Cheatsheet of Linux Commands:
 ### 1. Process Management:
