@@ -24,7 +24,7 @@ ssh -i devops-secret-key.pem ubuntu@ec2-44-250-180-68.us-west-2.compute.amazonaw
 ```
 
 ### SSH Connection to Cloud Server
-![SSH Connection](images/ssh-connection.png)
+![SSH Connection](images/Screenshot from 2026-01-31 19-05-01.png)
 
 <p align="center">
   <b>Figure:</b> Successful SSH connection to cloud instance
