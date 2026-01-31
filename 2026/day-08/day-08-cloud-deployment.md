@@ -130,18 +130,24 @@ ls -l nginx-logs.txt
 scp -i my-key.pem ubuntu@<instance-ip>:~/nginx-logs.txt .
 ```
 
-**Challenges Faced:**
+---
+
+## Challenges Faced:
 - Nginx page not loading initially
 - Issue was due to Port 80 not opened in security group
 - Fixed by updating inbound rules and reloading the page
 
-**What I Learned:**
+---
+
+## What I Learned:
 - How to launch and access a cloud server using SSH
 - Installing and managing services using systemctl
 - Importance of security groups and firewall rules
 - How to locate and extract Nginx logs
 - Real-world cloud deployment workflow
 
-**My Learnings:**
+---
+
+## My Learnings:
 Deployed my first cloud-based web server using Nginx, verified public access, and extracted logs for analysis.
 This felt like real production work, not just theory.
