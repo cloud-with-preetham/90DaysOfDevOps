@@ -1,81 +1,86 @@
-# My 90 Days DevOps Plan
 
-## 1) My Current Level
-- **Background:** [Non-IT]
-- **Current Skills:** [basic Linux]
-- **My Strengths:** [consistency, problem-solving,]
-- **My Gaps:** [CI/CD, Docker, Kubernetes, AWS hands-on, IaC, Monitoring]
+# 90 Days DevOps & Cloud Learning Plan
 
----
+## Introduction
+I am a **working professional from a non-IT background** transitioning into DevOps and Cloud Engineering.  
+I am starting this journey with a genuine interest in infrastructure, cloud systems, and how modern applications are built, deployed, and operated in real-world environments.
 
-## 2) My Understanding of DevOps
-**DevOps** is a culture/mindset to collaborate with development teams and operations team. By reducing them the time to market, Automating the tasks and scaling to end users.
-
-My focus in these 90 days is to learn **real-world DevOps**: building pipelines, deploying apps, managing infrastructure, and troubleshooting production-like issues.
+This 90-day plan is my execution blueprint to move from fundamentals to job-ready DevOps skills through consistent daily practice.
 
 ---
 
-## 3) Why I’m Learning DevOps & Cloud
-I’m starting DevOps & Cloud because:
-1. I want a career in a role that combines **development + infrastructure + automation**.
-2. I want to build skills that are **high-demand and practical**.
+## My Understanding of DevOps & Cloud
+DevOps is not just a set of tools.  
+It is a culture and practice that focuses on collaboration between development and operations, automation of workflows, reliability of systems, and faster delivery of value to users.
+
+Cloud computing provides on-demand infrastructure, scalability, and managed services that enable DevOps practices to work efficiently at scale.
 
 ---
 
-## 4) Where I Want to Reach
-In 90 days, I want to reach a level where I can confidently:
-- Deploy applications on cloud using DevOps practices
-- Build CI/CD pipelines and automate deployments
-- Understand real troubleshooting, monitoring, and infrastructure basics
+## Why I Am Learning DevOps & Cloud
+- I am aiming for a **job switch into IT**, specifically DevOps roles.
+- I have a real interest in **infrastructure, servers, and cloud platforms**.
+- I want to build **practical, hands-on skills**, not just theoretical knowledge.
+- I want a long-term, sustainable career in technology.
 
 ---
 
-## 5) My 3 Goals for the Next 90 Days
-1. **Deploy a production-style application** using Docker + Kubernetes with Ingress and configs.
-2. **Build a complete CI/CD pipeline** (GitHub Actions/Jenkins) that tests, builds, and deploys automatically.
-3. **Host the project on cloud (AWS)** using EC2/EKS basics + security best practices and documentation.
+## Where I Want to Reach in 90 Days
+By the end of 90 days, I want to be:
+- Ready to apply for **DevOps internships / junior DevOps roles**
+- Confident working with Linux systems and servers
+- Able to deploy and manage applications using Docker and basic AWS services
+- Comfortable following DevOps workflows used in real teams
 
 ---
 
-## 6) My 3 Core DevOps Skills I Will Build
-1. **Linux + Troubleshooting:** processes, logs, permissions, networking, system debugging  
-2. **CI/CD Pipelines:** Git, GitHub Actions/Jenkins, artifact builds, deployment automation  
-3. **Containers & Kubernetes:** Docker, K8s deployments/services, debugging, scaling
+## My 3 Core Goals (90 Days)
+1. Gain strong hands-on experience with **Linux, Git, and basic networking**
+2. Build and deploy containerized applications using **Docker**
+3. Understand and implement **basic CI/CD and cloud deployments on AWS**
 
 ---
 
-## 7) Weekly Time Budget
-- **Weekdays:** ~[3 to 4] hours/day (Mon–Fri)
-- **Weekends:** ~[4 to 6] hours/day (Sat–Sun)
-- **Total Weekly Commitment:** ~[30-32] hours/week
-
-Minimum rule: **Even on busy days, I will do at least 30 minutes**.
+## Core DevOps Skills I Will Build
+- **Linux fundamentals & troubleshooting**
+- **Version control and CI/CD basics**
+- **Cloud fundamentals (AWS) and containerization**
 
 ---
 
-## 8) How I Will Stay Consistent Every Day
-- I will study at: **09.00 AM to 01.00 PM**
-- Daily structure:
-  - **30% learning** (concepts + notes)
-  - **70% hands-on practice** (terminal + labs + mini tasks)
-- I will track progress using:
-  - GitHub commits
-  - A simple checklist in notes
-- If I miss a day, I will **not quit** — I will recover the next day with **1 extra hour**, not burnout.
+## Weekly Time Commitment
+- **Weekdays:** 4 hours/day  
+- **Weekends:** 6 hours/day  
+
+I prioritize consistency over perfection and will show up every day.
 
 ---
 
-## 9) My Execution Rules
-- I will avoid tutorial binge-watching without practice.
-- I will build and break things, then debug them.
-- I will document everything I learn in short notes.
-- I will focus on finishing projects, not chasing tools.
+## Current Skill Level (Honest Assessment)
+- Linux fundamentals: Basic  
+- Git & GitHub: Basic  
+- Networking basics: None  
+- Docker: None  
+- AWS / Cloud: None  
+- Scripting (Bash / Python): None  
 
 ---
 
-## 10) What I’ll Show Publicly
-By Day 90, my GitHub will have:
-- 1 complete DevOps project repo with README + architecture diagram
-- CI/CD pipeline code
-- Kubernetes manifests
-- Cloud deployment steps + screenshots/logs
+## My Discipline & Accountability Plan
+- Follow a **daily learning routine**
+- Practice hands-on labs every day
+- Maintain notes and code on GitHub
+- Share **weekly progress updates on LinkedIn**
+- Focus on improvement, not comparison
+
+---
+
+## Final Commitment
+For the next 90 days, I commit to:
+- Showing up daily
+- Learning by doing
+- Taking ownership of my growth
+- Building confidence through consistency
+
+This journey is not about speed — it is about direction and discipline.
+
