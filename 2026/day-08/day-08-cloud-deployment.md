@@ -117,7 +117,7 @@ ls -l nginx-logs.txt
 ```
 
 ### Nginx Logs File
-![Nginx Logs](images/nginx-log.png)
+![Nginx Logs](images/nginx-logs.png)
 
 <p align="center">
   <b>Figure:</b> Nginx access logs extracted and saved to file
