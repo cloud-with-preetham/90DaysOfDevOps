@@ -1,51 +1,85 @@
-# Day-2: Linux Architecture, Processes and systemd
+# Day 02 – Linux Architecture, Processes and systemd
 
 ---
 
-## How Linux works under the woods?
-- In the present world **90% of apps use linux**, and also built and running on linux.
+## How Linux Works Under the Hood
+- In today’s world, **most applications run on Linux-based systems**.
+- Linux provides a stable, secure, and efficient foundation for servers, cloud, and DevOps tools.
 
 ---
 
-## Explain the Core concepts of Linux?
-- **Linux**: Is an **Operating System**.
-- **Kernel**: **Kernel is the core of linux** or you can say it as the heart of linux.
-- **User Space**: **User Space is noting but User Interaction**. It is basically using the terminal to interact with or using Graphical User Interface.
-- **System Libraries**: **System Libraries** is providing functions for applications to **interact with the kernel**.
-- **System Utilities**: It is basic commands for system operations.
-- **init**: **init** is a tradition first process in the Linux kernel during boot. It initializes the system by staring the process and services in a specific order.
-- **systemd**: **systemd** is a mordern replacement for init. It manages system, startup and services and daemons more efficently and supports parallel system startups.
+## Core Concepts of Linux
+
+- **Linux**: An **operating system** that manages hardware and software resources.
+  
+- **Kernel**:  
+  The **core of Linux**.  
+  It manages:
+  - CPU scheduling
+  - Memory
+  - Hardware devices
+  - Process management
+
+- **User Space**:  
+  Where users and applications interact with the system.
+  - Command line (terminal)
+  - Graphical User Interface (GUI)
+  - Applications like browsers, editors, servers
+
+- **System Libraries**:  
+  Provide standard functions that allow applications to **communicate with the kernel** without direct hardware access.
+
+- **System Utilities**:  
+  Basic commands and tools used for system operations (e.g., `ls`, `ps`, `df`).
+
+- **init**:  
+  The **first process started by the kernel** during boot (PID 1 in older systems).
+  It starts system services in a fixed order.
+
+- **systemd**:  
+  A **modern replacement for init**.
+  - Manages system startup, services, and daemons
+  - Supports parallel service startup
+  - Automatically restarts failed services
 
 ---
 
-## How processes are created and managed?
-1. Process Creation:
-- A new process is created using `fork()` system call that duplicates the parent process.
-- `exec()` can then replace the new process memory with the new program.
-- The new program then gets a unique PID (Process ID).
+## How Processes Are Created and Managed
 
-2. Process Management:
-- The kernel manages processes, scheduling CPU time.
-- Commands like `ps` show running processes.
-- Processes can run in foreground & background using `&`.
-- Signal control processes using `(start,stop and kill)`.
+### Process Creation
+- `fork()` creates a new child process by duplicating the parent.
+- `exec()` replaces the child process with a new program.
+- Each process gets a unique **PID (Process ID)**.
 
-## Process States:
-- Running(R): Process is running and ready to execute.
-- Sleeping(S): Process is waiting for an event or resource.
-- Stopped(T): Process is stopped, usually by a signal.
-- Zombie(Z): Process has fininshed execution but still has an entry in the processes table.
+### Process Management
+- The kernel schedules CPU time between processes.
+- Processes can run in:
+  - Foreground
+  - Background (`&`)
+- Signals are used to control processes (start, stop, terminate).
 
 ---
 
-## What systemd does and why it matters?
-- `systemd` keeps Linux system oraginized and running smoothly from boot to shutdown.
+## Process States
+- **Running (R):** Process is executing or ready to run
+- **Sleeping (S):** Waiting for an event or resource
+- **Stopped (T):** Paused by a signal
+- **Zombie (Z):** Process finished execution but not yet cleaned up by parent
 
---- 
+---
 
-## Listing 5 commands i would use daily.
-- `ps` `ps aux`
-- `start, stop, kill`
-- `systemctl, journalctl`
-- `cd, mkdir, rmdir, free, df`
-- `cp, mv, rm`
+## What systemd Does and Why It Matters
+- Controls system boot and shutdown
+- Manages services and dependencies
+- Restarts failed services automatically
+- Centralizes logs for easier troubleshooting
+
+---
+
+## 5 Commands I Would Use Daily
+- `ps`, `ps aux` – View running processes
+- `top` – Monitor CPU and memory usage
+- `systemctl` – Manage services
+- `journalctl` – View system and service logs
+- `cd`, `mkdir`, `df`, `free` – Navigation and system info
+
