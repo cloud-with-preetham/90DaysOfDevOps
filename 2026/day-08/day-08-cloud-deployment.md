@@ -46,7 +46,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install docker.io -y
 sudo systemctl status docker 
 ```
-**If Nginx is not running:**
+**If Docker is not running:**
 ```bash
 sudo systemctl start docker
 sudo systemctl enable docker
