@@ -135,10 +135,11 @@ sudo chmod 775 /opt/team-workspace
 ---
 
 ### Testing
+```bash
 sudo -u tokyo touch /opt/dev-project/tokyo-test
 sudo -u berlin touch /opt/dev-project/berlin-test
 sudo -u nairobi touch /opt/team-workspace/nairobi-test
-
+```
 ---
 
 ## What I Learned
