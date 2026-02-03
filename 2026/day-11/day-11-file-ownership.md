@@ -1,12 +1,12 @@
 # Day 11 – File Ownership Challenge (chown & chgrp)
 
-## 🎯 Objective
+## Objective
 This challenge focuses on mastering **Linux file and directory ownership** using `chown`.  
 Understanding ownership is a critical DevOps skill for managing permissions in shared systems, production servers, CI/CD pipelines, and containerized environments.
 
 ---
 
-## 📂 Files & Directories Created
+## Files & Directories Created
 
 ### Files
 - `day-11-file-ownership.md`
@@ -28,7 +28,7 @@ Understanding ownership is a critical DevOps skill for managing permissions in s
 
 ---
 
-## 👥 Users & Groups Used
+## Users & Groups Used
 
 ### Users
 - `ubuntu`
@@ -140,8 +140,8 @@ sudo chown nairobi:vault-team bank-heist/escape-plan.txt
 
 ---
 
-### Changing Group Ownership using `chgrp`
-![Changing group ownership with chgrp](screenshots/03-chgrp-group.png)
+### Changing Group Ownership using `chown`
+![Changing group ownership with chown](screenshots/03-chown-group.png)
 
 ---
 
