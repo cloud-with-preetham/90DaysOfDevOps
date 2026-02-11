@@ -35,6 +35,18 @@ day-17/
 
 ---
 
+## 📜 Scripts
+
+- [`for_loop.sh`](./scripts/for_loop.sh)
+- [`count.sh`](./scripts/count.sh)
+- [`countdown.sh`](./scripts/countdown.sh)
+- [`greet.sh`](./scripts/greet.sh)
+- [`args_demo.sh`](./scripts/args_demo.sh)
+- [`install_packages.sh`](./scripts/install_packages.sh)
+- [`safe_script.sh`](./scripts/safe_script.sh)
+
+---
+
 ## Scripts Explained
 
 ### `for_loop.sh`
