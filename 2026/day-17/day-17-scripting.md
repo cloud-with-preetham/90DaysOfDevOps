@@ -37,7 +37,7 @@ day-17/
 
 ## Scripts Explained
 
-### for_loop.sh
+### `for_loop.sh`
 Loops through a list of fruits and prints each one.
 
 **Sample Output**
@@ -51,19 +51,19 @@ watermelon
 
 ---
 
-### count.sh
+### `count.sh`
 Uses a `for` loop to print numbers from **1 to 10**.
 
 ---
 
-### countdown.sh
+### `countdown.sh`
 - Takes user input
 - Counts down to zero using a `while` loop
 - Prints **Done!** when finished
 
 ---
 
-### greet.sh
+### `greet.sh`
 - Accepts a name as an argument
 - Prints a greeting
 - Shows usage message if no argument is provided
@@ -75,7 +75,7 @@ Hello, Preetham
 
 ---
 
-### args_demo.sh
+### `args_demo.sh`
 Demonstrates command-line arguments:
 - Script name (`$0`)
 - Total number of arguments (`$#`)
@@ -83,7 +83,7 @@ Demonstrates command-line arguments:
 
 ---
 
-### install_packages.sh
+### `install_packages.sh`
 A real-world automation script that:
 - Ensures the script is run as **root**
 - Checks if packages are already installed
@@ -99,7 +99,7 @@ sudo ./install_packages.sh
 
 ---
 
-### safe_script.sh
+### `safe_script.sh`
 Demonstrates error handling:
 - Uses `set -e` to exit on failure
 - Safely creates directories and files
