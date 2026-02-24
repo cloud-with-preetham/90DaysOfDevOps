@@ -156,9 +156,9 @@ echo "Script name $0"
 **Output:**
 
 ```bash
-$ ./args_demo.sh DevOps Docker Kubernetes
+$ ./args_demo.sh Preetham DevOps Engineer
 Total number of arguments 3
-All arguments DevOps Docker Kubernetes
+All arguments Preetham DevOps Engineer
 Script name ./args_demo.sh
 ```
 
