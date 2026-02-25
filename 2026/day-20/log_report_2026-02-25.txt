@@ -1,0 +1,17 @@
+====================================
+        LOG ANALYSIS REPORT
+====================================
+Date of Analysis : Wed Feb 25 09:29:05 UTC 2026
+Log File         : zookeeper_2k.log
+Total Lines      : 2000
+Total Errors     : 305
+
+----- Top 5 Error Messages -----
+      1 2015-07-29 23:44:28,903 - ERROR [CommitProcessor:1:NIOServerCnxn@180] - Unexpected Exception: 
+      1 2015-07-29 19:21:26,625 - ERROR [LearnerHandler-/10.10.34.11:52855:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+      1 2015-07-29 19:20:56,605 - ERROR [LearnerHandler-/10.10.34.11:52814:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+      1 2015-07-29 19:20:46,814 - ERROR [LearnerHandler-/10.10.34.13:57617:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+      1 2015-07-29 19:20:36,704 - ERROR [LearnerHandler-/10.10.34.12:59480:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+
+----- Critical Events -----
+None
