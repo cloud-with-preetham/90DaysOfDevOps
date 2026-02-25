@@ -408,14 +408,14 @@ Using the `local` keyword for function variables prevents them from polluting th
 
 ## Best Practices Applied
 
-Used `set -euo pipefail` for safer script execution
-Created modular functions with single responsibilities
-Used `local` variables to avoid scope pollution
-Added clear comments and section headers
-Used meaningful function and variable names
-Implemented a `main()` function for better organization
-Used command substitution for dynamic values
-Formatted output for readability
+- Used `set -euo pipefail` for safer script execution
+- Created modular functions with single responsibilities
+- Used `local` variables to avoid scope pollution
+- Added clear comments and section headers
+- Used meaningful function and variable names
+- Implemented a `main()` function for better organization
+- Used command substitution for dynamic values
+- Formatted output for readability
 
 ---
 
