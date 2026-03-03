@@ -1,0 +1,23 @@
+server:
+  name: prod-server-01
+  ip: 192.168.1.100
+  port: 8080
+
+database:
+  type: mysql
+  host: db.example.com
+  port: 3306
+  name: production_db
+  credentials:
+    username: admin
+    password: secure_password_123
+
+startup_script: |
+  - echo "Running startup script..."
+  - echo "Starting server..."
+  - service nginx start
+  - service mysql start
+  - echo "Server started successfully!"
+
+Description: >
+  This YAML file defines the configuration for a production server. It includes details about the server's name, IP address, and port. Additionally, it specifies the database configuration, including the type, host, port, name, and credentials. Finally, it contains a startup script that outlines the steps to start the server and its associated services_
