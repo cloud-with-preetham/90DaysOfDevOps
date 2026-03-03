@@ -1,0 +1,13 @@
+# This is a Task from Day 38 of 90DaysofDevOps
+
+name: Preetham Pereira
+role: DevOps Engineer
+experience: 3 months
+learning: true
+tools:
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - Ansible
+  - Terraform
+hobbies: ["Coding", "Traveling", "Exploring new technologies"]
