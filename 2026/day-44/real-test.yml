@@ -1,0 +1,23 @@
+name: Real Test in CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/real-test.yml"
+      - "scripts/health_check.sh"
+
+jobs:
+  script-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod 764 "scripts/health_check.sh"
+
+      - name: Run health check script
+        run: ./scripts/health_check.sh
