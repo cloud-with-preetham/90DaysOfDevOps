@@ -1,0 +1,51 @@
+name: Upload & Download Artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/artifacts-upload-download.yml"
+
+# Task 3 & 4
+jobs:
+  # Job 1
+  generate_artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Generate report file
+        run: |
+          mkdir -p reports
+          {
+          echo "Build report generated on: $(date -u)"
+          echo "Repository: ${{ github.repository}}"
+          echo "Commit: ${{ github.sha }}"
+          } > reports/build-report.txt
+          cat reports/build-report.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-build-report
+          path: reports/build-report.txt
+  # Job 2
+  consume_artifacts:
+    runs-on: ubuntu-latest
+    needs: generate_artifacts
+    steps:
+      - name: Download artifact from previous jobs
+        uses: actions/download-artifact@v4
+        with:
+          name: my-build-report
+          path: downloaded
+
+      - name: Print downloaded artifact
+        run: |
+          echo "Downloaded Files:"
+          ls -la downloaded
+          echo "---build-report.txt---"
+          cat downloaded/build-report.txt
