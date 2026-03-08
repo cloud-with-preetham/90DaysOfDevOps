@@ -97,7 +97,7 @@ Implemented in `artifact-upload-download.yml`:
 
 ## Task 5: Run Real Tests in CI
 
-Implemented in `real-tests.yml` using `scripts/health_check.sh`:
+Implemented in `real-test.yml` using `scripts/health_check.sh`:
 
 - Checkout code
 - `chmod 764 "scripts/health_check.sh"`
@@ -119,7 +119,7 @@ Validation:
 
 ## Task 6: Caching
 
-Implemented in `cache-demo.yml`:
+Implemented in `cache.yml`:
 
 - Setup Python 3.12
 - Cache path: `~/.cache/pip`
