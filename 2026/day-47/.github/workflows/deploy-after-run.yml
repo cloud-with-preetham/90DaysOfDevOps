@@ -1,0 +1,21 @@
+name: Deploy After Tests
+
+on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    types: [completed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        if: github.event.workflow_run.conclusion == 'success'
+        run: echo "Tests passed. Deploying application..."
+
+      - name: Handle Failure
+        if: github.event.workflow_run.conclusion != 'success'
+        run: |
+          echo "Tests failed. Deployment stopped."
+          exit 1

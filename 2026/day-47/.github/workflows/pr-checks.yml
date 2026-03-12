@@ -1,0 +1,56 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  file-size-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Check File Size
+        run: |
+          files=$(git diff --name-only --diff-filter=AMR \
+            "${{ github.event.pull_request.base.sha }}" \
+            "${{ github.event.pull_request.head.sha }}")
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [ ! -f "$file" ] && continue
+
+            size=$(wc -c < "$file")
+            if [ "$size" -gt 1048576 ]; then
+              echo "File $file is larger than 1MB"
+              exit 1
+            fi
+          done <<< "$files"
+
+  branch-name-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate Branch Name
+        run: |
+          branch="${{ github.head_ref }}"
+          if [[ ! $branch =~ ^(feature|fix|docs)/ ]]; then
+            echo "Branch name must start with feature/, fix/, or docs/"
+            exit 1
+          fi
+
+  pr-body-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR Body
+        run: |
+          body="${{ github.event.pull_request.body }}"
+          if [ -z "$body" ]; then
+            echo "Warning: PR description is empty"
+          fi
