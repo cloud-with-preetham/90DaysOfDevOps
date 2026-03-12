@@ -1,0 +1,45 @@
+name: Reusable Build Workflow
+
+on:
+  workflow_call:
+    inputs:
+      app_name:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+        default: staging
+    secrets:
+      DOCKER_TOKEN:
+        required: true
+
+    outputs:
+      build_version:
+        description: "Generated Build Version"
+        value: ${{ jobs.build.outputs.build_version }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      build_version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Print build info
+        run: |
+          echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
+
+      - name: Check docker token
+        run: |
+          echo "Docker token is set: ${{ secrets.docker_token != '' }}"
+
+      - name: Generate build version"
+        id: version
+        run: |
+          SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
+          VERSION="v1.0-$SHORT_SHA"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
