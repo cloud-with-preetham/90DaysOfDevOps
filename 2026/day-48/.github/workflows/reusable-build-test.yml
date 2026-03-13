@@ -1,0 +1,41 @@
+name: Reusable Build and Test
+
+on:
+  workflow_call:
+    inputs:
+      python_version:
+        required: true
+        type: string
+      run_tests:
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    outputs:
+      test_result: ${{ steps.result.outputs.status }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ inputs.python_version }}
+          cache: pip
+          cache-dependency-path: app/requirements.txt
+
+      - name: Install Dependencies
+        run: pip install --no-cache-dir -r app/requirements.txt
+
+      - name: Run Tests
+        if: inputs.run_tests == true
+        id: result
+        run: |
+          chmod 764 tests/test.sh
+          ./tests/test.sh
+          echo "status=passed" >> $GITHUB_OUTPUT
+
