@@ -4,8 +4,10 @@ on:
   push:
     branches: [ main ]
 
-jobs:
+permissions:
+  contents: read
 
+jobs:
   build-test:
     uses: ./.github/workflows/reusable-build-test.yml
     with:
@@ -15,11 +17,9 @@ jobs:
   docker-build:
     needs: build-test
     uses: ./.github/workflows/reusable-docker.yml
-
     with:
       image_name: github-actions-capestone
       tag: latest
-
     secrets:
       docker_token: ${{ secrets.DOCKER_TOKEN }}
 
