@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+  name: devops-nginx
+  labels:
+    app: nginx
+    environment: dev
+    team: devops
+
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
