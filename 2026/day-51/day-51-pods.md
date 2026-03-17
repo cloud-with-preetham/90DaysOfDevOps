@@ -250,7 +250,7 @@ Result:
 
 ### Screenshot
 
-![Pods deleted and cluster cleaned up](screenshots/task_6/1_task6.png)
+![Pods deleted and cluster cleaned up](screenshots/Task_6/1_task6.png)
 
 ---
 
