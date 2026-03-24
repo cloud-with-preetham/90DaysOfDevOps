@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pvc-dynamic-pod
+spec:
+  containers:
+    - name: app
+      image: busybox:1.28 # latest pull was the issue switched to v1.28
+      command: ["/bin/sh", "-c"]
+      args: ["date >> /data/message.txt; sleep 3600"]
+      volumeMounts:
+        - mountPath: /data
+          name: storage
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: pvc-dynamic
+

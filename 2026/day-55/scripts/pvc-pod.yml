@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pvc-pod
+spec:
+  containers:
+    - name: app
+      image: busybox:latest
+      command: ["/bin/sh", "-c"]
+      args: ["date >> /data/message.txt; sleep 3600"]
+      volumeMounts:
+        - mountPath: /data
+          name: persistent-storage
+  volumes:
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: pvc-static
