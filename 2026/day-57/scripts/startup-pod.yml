@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: startup-pod
+spec:
+  containers:
+    - name: busybox
+      image: busybox:latest
+      args: ["/bin/sh", "-c", "sleep 20; touch /tmp/started; sleep 600"]
+      startupProbe:
+        exec:
+          command: ["cat", "/tmp/started"]
+        periodSeconds: 5
+        failureThreshold: 12
+      livenessProbe:
+        exec:
+          command: ["cat", "/tmp/started"]
+        periodSeconds: 5

@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: stress-pod
+spec:
+  containers:
+    - name: stress
+      image: polinux/stress
+      resources:
+        limits:
+          memory: "100Mi"
+      command: ["stress"]
+      args: ["--vm", "1", "--vm-bytes", "200Mi", "--vm-hang", "1"]
