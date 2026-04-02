@@ -343,7 +343,7 @@ VPC
 └── Security Group
 ```
 
-![Architecture diagram for the modular multi-tier AWS infrastructure built with Terraform](screenshots/5_archiecture.jpeg)
+![Architecture diagram for the modular multi-tier AWS infrastructure built with Terraform](screenshots/5_architecture.jpeg)
 
 ## Module Communication Flow
 
