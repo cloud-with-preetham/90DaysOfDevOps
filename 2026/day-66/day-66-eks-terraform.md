@@ -8,6 +8,16 @@ This project demonstrates how DevOps engineers provision and manage Kubernetes i
 
 ---
 
+## Architecture Diagram
+
+The following diagram gives a high-level view of the EKS setup, including public and private subnets, internet access, worker nodes, and the AWS-managed control plane.
+
+![AWS EKS architecture provisioned with Terraform](screenshots/7_architecture.jpeg)
+
+_Architecture overview of the Terraform-provisioned AWS EKS environment._
+
+---
+
 ## Project Structure
 
 ```
