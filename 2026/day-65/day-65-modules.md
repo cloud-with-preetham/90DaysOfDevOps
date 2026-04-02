@@ -334,6 +334,8 @@ terraform destroy
 
 ## Final Architecture
 
+The following diagram shows the final modular AWS infrastructure built with Terraform:
+
 ```
 VPC
 ├── Public Subnet → Web Server (Public IP)
@@ -341,7 +343,18 @@ VPC
 └── Security Group
 ```
 
----
+![Architecture diagram for the modular multi-tier AWS infrastructure built with Terraform](screenshots/5_archiecture.jpeg)
+
+## Module Communication Flow
+
+Terraform modules communicate using outputs and inputs:
+
+- VPC module outputs public and private subnet IDs
+- Security Group module outputs security group ID
+- EC2 module takes subnet ID and security group ID as inputs
+- Root module connects all modules together
+
+This modular approach makes infrastructure reusable, scalable, and easier to maintain.
 
 ## Key Learning
 
