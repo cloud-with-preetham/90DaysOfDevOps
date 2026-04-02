@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Kubernetes
+kubeconfig
+
+# OS
+.DS_Store
