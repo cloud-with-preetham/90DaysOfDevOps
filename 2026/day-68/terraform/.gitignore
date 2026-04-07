@@ -1,0 +1,15 @@
+# Ignore SSH keys
+keys/
+*.pem
+*.key
+
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Ansible temp files
+*.retry
+
+# OS files
+.DS_Store
