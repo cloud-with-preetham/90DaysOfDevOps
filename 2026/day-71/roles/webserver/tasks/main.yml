@@ -1,0 +1,42 @@
+---
+# tasks file for roles/webserver
+- name: Install nginx
+  package:
+    name: nginx
+    state: present
+
+- name: Remove default nginx config
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  notify: Restart nginx
+
+- name: Deploy vhost config
+  template:
+    src: vhost.conf.j2
+    dest: "/etc/nginx/conf.d/{{ app_name }}.conf"
+  notify: Restart nginx
+
+- name: Create web root
+  file:
+    path: "/var/www/{{ app_name }}"
+    state: directory
+    mode: "0755"
+
+- name: Deploy index page
+  template:
+    src: index.html.j2
+    dest: "/var/www/{{ app_name }}/index.html"
+
+- name: Deploy DB config with secrets
+  template:
+    src: db-config.j2
+    dest: /etc/db-config.env
+    owner: root
+    mode: "0600"
+
+- name: Ensure nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: true
