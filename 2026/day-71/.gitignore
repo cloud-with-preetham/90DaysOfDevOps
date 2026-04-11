@@ -1,0 +1,22 @@
+# Vault password file (CRITICAL)
+.vault_pass
+
+# Ansible retry files
+*.retry
+
+# Python / system files
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
