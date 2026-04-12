@@ -1,0 +1,11 @@
+---
+timezone: America/Los_Angeles 
+
+common_packages:
+  - vim
+  - curl
+  - wget
+  - git
+  - htop
+  - tree
+  - unzip
